@@ -1,0 +1,41 @@
+{
+  "name": "friendsoftypo3headless/headless-backendlayouts",
+  "type": "typo3-cms-extension",
+  "description": "This extension adds a serialized JSON of the TYPO3 backend layout to the TYPO3 headless appearance key",
+  "keywords": [
+    "TYPO3",
+    "headless",
+    "pwa",
+    "json",
+    "backendlayout"
+  ],
+  "authors": [
+    {
+      "name": "Niels Seelhöfer",
+      "role": "Developer"
+    },
+    {
+      "name": "Sven Petersen",
+      "role": "Developer"
+    }
+  ],
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "require": {
+    "typo3/cms-core": "^11.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "FriendsOfTYPO3Headless\\HeadlessBackendlayouts\\": "Classes/"
+    }
+  },
+  "suggest": {
+    "friendsoftypo3/headless": "^3.0"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "headless_backendlayouts"
+    }
+  }
+}
