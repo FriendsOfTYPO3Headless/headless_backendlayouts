@@ -15,8 +15,8 @@ and then, include TypoScript template, and you are ready to go.
 {
   ...
   appearance: {
-  ...
-  pageContentRows": [
+    ...
+    pageContentRows": [
     {
       "type": "row",
       "tag": "header",
