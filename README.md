@@ -1,3 +1,5 @@
+![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2.svg)
+
 # TYPO3 Extension "headless_backendlayouts"
 Adds a serialized JSON of the TYPO3 backend layout to the "[EXT:headless](https://github.com/TYPO3-Initiatives/headless)" extension appearance key
 
