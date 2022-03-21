@@ -46,9 +46,9 @@ class BackendLayoutSerializer
                 $rowConfig[] = [
                     'type'          => 'col',
                     'name'          => $name,
-                    'contentColPos' => $col['colPos'] ? 'colPos' . $col['colPos'] : '',
-                    'colPos'        => $col['colPos'] ? : '',
-                    'colspan'       => $col['colspan'] ? : '',
+                    'contentColPos' => $col['colPos'] !== null ? 'colPos' . $col['colPos'] : '',
+                    'colPos'        => $col['colPos'] ?? '',
+                    'colspan'       => $col['colspan'] ?? '',
                     'tag'           => $col['tag'] ?? null,
                 ];
             }
