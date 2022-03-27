@@ -1,10 +1,13 @@
 lib.pageAppearance {
   fields {
-    pageContentRows = USER_INT
+    pageContentRows = TEXT
     pageContentRows {
-      userFunc = FriendsOfTYPO3Headless\HeadlessBackendlayouts\Serializer\BackendLayoutSerializer->serialize
-      data = levelfield:-2,backend_layout_next_level,slide
+      dataProcessing {
+        10 = FriendsOfTYPO3Headless\HeadlessBackendlayouts\DataProcessing\BackendLayoutProcessor
+        10 {
+          as = backendLayout
+        }
+      }
     }
   }
 }
-
