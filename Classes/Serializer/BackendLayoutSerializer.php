@@ -19,20 +19,20 @@ use function strlen;
 
 class BackendLayoutSerializer
 {
-    public function serialize(): string
+    public function serialize($tsfe): array
     {
-        $rootline = $GLOBALS['TSFE']->rootLine;
-        $page = $GLOBALS['TSFE']->page ?? [];
+        $rootline = $tsfe->rootLine;
+        $page = $tsfe->page ?? [];
 
         $pagelayout = GeneralUtility::makeInstance(PageLayoutResolver::class)->getLayoutForPage($page, $rootline);
         $pageTsLayoutPrefix = 'pagets__';
 
         if (0 !== strpos($pagelayout, $pageTsLayoutPrefix)) {
-            return json_encode(['error' => 'BackendLayout config not found.'], JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE);
+            return ['error' => 'BackendLayout config not found.'];
         }
 
         $layoutName = substr($pagelayout, strlen($pageTsLayoutPrefix));
-        $pageTsConfig = BackendUtility::getPagesTSconfig($GLOBALS['TSFE']->page['uid']);
+        $pageTsConfig = BackendUtility::getPagesTSconfig($tsfe->page['uid']);
         $backendLayoutTsConfig = $pageTsConfig['mod.']['web_layout.']['BackendLayouts.'][$layoutName . '.']['config.']['backend_layout.'];
 
         $return = [];
@@ -59,7 +59,6 @@ class BackendLayoutSerializer
                 'children' => $rowConfig,
             ];
         }
-
-        return json_encode($return, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE);
+        return $return;
     }
 }
