@@ -1,5 +1,7 @@
 ![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2.svg)
 
+[![Latest Stable Version](http://poser.pugx.org/friendsoftypo3headless/headless-backendlayouts/v)](https://packagist.org/packages/friendsoftypo3headless/headless-backendlayouts) [![Total Downloads](http://poser.pugx.org/friendsoftypo3headless/headless-backendlayouts/downloads)](https://packagist.org/packages/friendsoftypo3headless/headless-backendlayouts) [![Latest Unstable Version](http://poser.pugx.org/friendsoftypo3headless/headless-backendlayouts/v/unstable)](https://packagist.org/packages/friendsoftypo3headless/headless-backendlayouts) [![License](http://poser.pugx.org/friendsoftypo3headless/headless-backendlayouts/license)](https://packagist.org/packages/friendsoftypo3headless/headless-backendlayouts) [![PHP Version Require](http://poser.pugx.org/friendsoftypo3headless/headless-backendlayouts/require/php)](https://packagist.org/packages/friendsoftypo3headless/headless-backendlayouts)
+
 # TYPO3 Extension "headless_backendlayouts"
 Adds a serialized JSON of the TYPO3 backend layout to the "[EXT:headless](https://github.com/TYPO3-Initiatives/headless)" extension appearance key
 
